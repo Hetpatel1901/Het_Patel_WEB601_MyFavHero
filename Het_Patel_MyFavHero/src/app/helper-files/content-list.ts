@@ -20,9 +20,16 @@ export class ContentList {
     }
 
     printIndex(index: number): string {
-        let readerFriendlyHtml = `<div><p>Title: ${this._items[index].title}</p>
+        let myhero = `<div><p>Title: ${this._items[index].title}</p>
         <p>Description: ${this._items[index].description}</p><p>Creator: ${this._items[index].creator}</p></div>`;
 
-        return readerFriendlyHtml;
+        if (this._items[index].imgURL) {
+            myhero += `<img src='${this._items[index].imgURL}' alt='${this._items[index].type}'>`;
+          }
+          if (this._items[index].type) {
+            myhero += `<p>Type: ${this._items[index].type}</p>`;
+          }
+
+        return myhero;
     }
 }
