@@ -1,0 +1,48 @@
+.border{
+    display: block;
+    border:  solid 1px black;
+}
+
+:host{
+        display: flex;
+        flex-direction: column;
+        float: left;
+        width: 450px;
+        height: 30%;
+        text-align: center;
+         margin: 30px 25px;
+        border: 1px solid #000;
+         padding: 8px;
+    
+        &.is-even {
+            background-color: rgb(135, 135, 135);
+          }
+        &.is-odd{
+             background-color: white;
+         }
+    
+     img{
+        width: 25em;
+        width: auto;
+        height: 350px;
+        border: 5px solid black;
+    }
+    p{
+        padding: 15px;
+    }
+     .type{
+         padding: 13px;
+         color: white;
+         background-color: brown;
+     }
+     .author{
+        padding: 12px;
+        color: white;
+        background-color: goldenrod;
+     }
+     .tags{
+        padding: 10px;
+        color: white;
+        background-color: cadetblue;
+     }
+    }

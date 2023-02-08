@@ -1,8 +1,16 @@
-<p>content-card works!</p>
-<p [innerHTML]="displayMyIndex(0)">{{displayMyIndex(0)}}</p>
-<hr>
-<p [innerHTML]="displayMyIndex(1)">{{displayMyIndex(1)}}</p>
-<hr>
-<p [innerHTML]="displayMyIndex(2)">{{displayMyIndex(2)}}</p>
-<hr>
-<p [innerHTML]="displayMyIndex(10)">{{displayMyIndex(10)}}</p>
+<div class="border">
+    <h2 *ngIf="content && content.title else elseBlockNameIsWhateverYouWant">
+        {{ content.title }}
+    </h2>
+    <!-- <img *ngIf="contentItem" src="{{contentItem.imageUrl}}"> -->
+    <img *ngIf="content && content.imgURL else elseBlockNameIsWhateverYouWant" [src]="content.imgURL" (click)="pritnItem()">
+    <p class="body" *ngIf="content && content.description; else elseBlockNameIsWhateverYouWant">{{content.description}}</p>
+
+    <div class="type"  *ngIf="content && content.type else elseBlockNameIsWhateverYouWant">{{content.type}}</div>
+    <div class="author"  *ngIf="content && content.creator else elseBlockNameIsWhateverYouWant">{{content.creator}}</div>
+    <div class="tags"  *ngIf="content && content.tags else elseBlockNameIsWhateverYouWant">{{content.tags}}</div>
+
+    <ng-template #elseBlockNameIsWhateverYouWant>
+        <p class="not-found" hidden></p>
+    </ng-template>
+</div>  

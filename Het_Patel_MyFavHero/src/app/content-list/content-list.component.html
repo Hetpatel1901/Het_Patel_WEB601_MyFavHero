@@ -1,0 +1,3 @@
+<div>
+    <app-content-card *ngFor="let content of content; index as i; first as idFirst; odd as odd; even as even;" [content]="content" class="chess-player-{{i}} border" [class.is-odd]="odd" [class.is-even]="even"></app-content-card>
+</div>
