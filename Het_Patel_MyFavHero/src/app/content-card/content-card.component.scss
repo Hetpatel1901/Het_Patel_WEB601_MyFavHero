@@ -1,6 +1,6 @@
 .border{
     display: block;
-    border:  solid 1px black;
+    border:  solid 2px rgb(236, 236, 236);
 }
 
 :host{
@@ -15,17 +15,17 @@
          padding: 8px;
     
         &.is-even {
-            background-color: rgb(135, 135, 135);
+            background-color: rgb(94, 67, 67);
           }
         &.is-odd{
-             background-color: white;
+             background-color: rgb(211, 154, 84);
          }
     
      img{
         width: 25em;
         width: auto;
         height: 350px;
-        border: 5px solid black;
+        border: 5px solid rgb(139, 187, 230);
     }
     p{
         padding: 15px;
@@ -33,7 +33,7 @@
      .type{
          padding: 13px;
          color: white;
-         background-color: brown;
+         background-color: rgb(42, 120, 165);
      }
      .author{
         padding: 12px;
@@ -43,6 +43,6 @@
      .tags{
         padding: 10px;
         color: white;
-        background-color: cadetblue;
+        background-color: rgb(197, 76, 76);
      }
     }
