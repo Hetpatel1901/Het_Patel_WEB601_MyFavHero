@@ -25,6 +25,13 @@ export class ContentCardComponent implements OnInit {
     console.log(this.content?.creator);
   }
 
+clickphoto(id: number, title: string){
+  console.log(`content id: ${id}, title: ${title}`);
+}
+
+clickphoto2(){
+  console.log(`Content ID: ${this.content?.id} Title: ${this.content?.title}`);
+}
 
   ngOnInit(): void {
   }

@@ -3,7 +3,7 @@
         {{ content.title }}
     </h2>
     <!-- <img *ngIf="contentItem" src="{{contentItem.imageUrl}}"> -->
-    <img *ngIf="content && content.imgURL else elseBlockNameIsWhateverYouWant" [src]="content.imgURL" (click)="pritnItem()">
+    <img *ngIf="content && content.imgURL else elseBlockNameIsWhateverYouWant" [src]="content.imgURL" (click)="clickphoto2()">
     <p class="body" *ngIf="content && content.description; else elseBlockNameIsWhateverYouWant">{{content.description}}</p>
 
     <div class="type"  *ngIf="content && content.type else elseBlockNameIsWhateverYouWant">{{content.type}}</div>
