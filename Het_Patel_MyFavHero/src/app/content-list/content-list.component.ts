@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 export class ContentListComponent implements OnInit {
   
   content: Content[];
-  
+  public inputvalue?: Optional;
   constructor() {
   this.content = [{
     id:0,
@@ -78,6 +78,7 @@ export class ContentListComponent implements OnInit {
     tags: ['Action', 'Adventure', 'Fantasy'],
   },
 ]
+this.inputvalue="";
 }
     ngOnInit(): void {
   }
