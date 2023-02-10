@@ -11,7 +11,7 @@ export class FilterPipe implements PipeTransform {
       return content;
     }
     return content.filter((item: Content) => {
-    return item.type?.length || item.type == 'anime' || item.type == 'manga';
+    return item.type?.length || item.type == 'Action' || item.type == 'Superhero';
   });
  }
 }

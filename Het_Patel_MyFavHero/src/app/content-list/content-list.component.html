@@ -2,16 +2,22 @@
     <app-content-card *ngFor="let content of content; index as i; first as idFirst; odd as odd; even as even;" [content]="content" class="chess-player-{{i}} border" [class.is-odd]="odd" [class.is-even]="even"></app-content-card>
 </div> -->
 
-<div *ngFor="let item of (content | contents); index as i; first as isFirst; odd as odd; even as even;" >
 
-    <app-content-card  *ngIf="item.type=='anime'" [content]="item" class="chess-player-{{i}} border" [class.is-odd]="odd" [class.is-even]="even"></app-content-card>
+<div *ngFor="let content of (content | fliter); index as i; first as isFirst; odd as odd; even as even;" >
+
+    
+<app-content-card  *ngIf="content.type=='Superhero'" [content]="content" class="chess-player-{{i}} border" [class.is-odd]="odd" [class.is-even]="even"></app-content-card>
 </div>
+<div *ngFor="let content of (content | fliter); index as i; first as isFirst; odd as odd; even as even;" >
 
 
-<div *ngFor="let item of (content | contents); index as i; first as isFirst; odd as odd; even as even;" >
-    <app-content-card  *ngIf="item.type=='manga'" [content]="item" class="chess-player-{{i}} border" [class.is-odd]="odd" [class.is-even]="even"></app-content-card>
+<app-content-card  *ngIf="content.type=='Magic'" [content]="content" class="chess-player-{{i}} border" [class.is-odd]="odd" [class.is-even]="even"></app-content-card>
 </div>
+<div *ngFor="let content of (content | fliter); index as i; first as isFirst; odd as odd; even as even;" >
 
-<div *ngFor="let item of (content | contents); index as i; first as isFirst; odd as odd; even as even;" >
-    <app-content-card  *ngIf="! item.type" [content]="item" class="chess-player-{{i}} border" [class.is-odd]="odd" [class.is-even]="even"></app-content-card>
+<app-content-card  *ngIf="content.type=='Action'" [content]="content" class="chess-player-{{i}} border" [class.is-odd]="odd" [class.is-even]="even"></app-content-card>
+</div>
+<div *ngFor="let content of (content | fliter); index as i; first as isFirst; odd as odd; even as even;" >
+
+<app-content-card  *ngIf="!content.type" [content]="content" class="chess-player-{{i}} border" [class.is-odd]="odd" [class.is-even]="even"></app-content-card>
 </div>
