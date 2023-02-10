@@ -1,3 +1,17 @@
-<div>
+<!-- <div>
     <app-content-card *ngFor="let content of content; index as i; first as idFirst; odd as odd; even as even;" [content]="content" class="chess-player-{{i}} border" [class.is-odd]="odd" [class.is-even]="even"></app-content-card>
+</div> -->
+
+<div *ngFor="let item of (content | contents); index as i; first as isFirst; odd as odd; even as even;" >
+
+    <app-content-card  *ngIf="item.type=='anime'" [content]="item" class="chess-player-{{i}} border" [class.is-odd]="odd" [class.is-even]="even"></app-content-card>
+</div>
+
+
+<div *ngFor="let item of (content | contents); index as i; first as isFirst; odd as odd; even as even;" >
+    <app-content-card  *ngIf="item.type=='manga'" [content]="item" class="chess-player-{{i}} border" [class.is-odd]="odd" [class.is-even]="even"></app-content-card>
+</div>
+
+<div *ngFor="let item of (content | contents); index as i; first as isFirst; odd as odd; even as even;" >
+    <app-content-card  *ngIf="! item.type" [content]="item" class="chess-player-{{i}} border" [class.is-odd]="odd" [class.is-even]="even"></app-content-card>
 </div>
