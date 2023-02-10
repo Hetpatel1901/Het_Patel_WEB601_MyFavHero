@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Optional } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
+import { TmplAstBoundText } from '@angular/compiler';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-content-list',
@@ -78,5 +80,21 @@ export class ContentListComponent implements OnInit {
 ]
 }
     ngOnInit(): void {
+  }
+  clickEvent(): any {
+    for(let i = 0;  i < this.content.length; i++) {
+     console.log(this.content[i].type);
+     let abj =  <HTMLInputElement>document.getElementById('aut');   
+     console.log(abj.value);
+     if(this.content[i].type == abj.value){
+       let out= <HTMLInputElement>document.getElementById('msg');
+        out.innerHTML = 'we found the item with all other.';
+      }
+    }
+    let abj =  <HTMLInputElement>document.getElementById('aut');
+    if(!abj.innerHTML){
+             abj.innerHTML = 'we can not find the result.';
+
+    }
   }
 }
