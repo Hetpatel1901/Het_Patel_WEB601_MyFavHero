@@ -5,7 +5,6 @@
 
 :host{
         display: flex;
-        //flex-direction: column;
         float: left;
         width: 450px;
         height: 30%;
@@ -19,7 +18,7 @@
           }
         &.is-odd{
              background-color: rgb(211, 154, 84);
-         }
+         } 
     
      img{
         width: 25em;
