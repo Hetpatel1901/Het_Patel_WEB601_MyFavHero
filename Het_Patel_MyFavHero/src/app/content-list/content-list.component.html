@@ -8,15 +8,15 @@
 
 
 <div *ngFor="let content of (content | filter); index as i; first as isFirst; odd as odd; even as even;" >
-    <app-content-card  *ngIf="content.type=='Anime'" [content]="content" class="chess-player-{{i}} border" class="Superhero"></app-content-card> 
+    <app-content-card  *ngIf="content.type=='Superhero'" [content]="content" class="chess-player-{{i}} border" class="Superhero"></app-content-card> 
 </div>
 
 <div *ngFor="let content of (content | filter); index as i; first as isFirst; odd as odd; even as even;" >
-    <app-content-card  *ngIf="content.type=='Manga'" [content]="content" class="chess-player-{{i}} border" class="Magic"></app-content-card>
+    <app-content-card  *ngIf="content.type=='Magic'" [content]="content" class="chess-player-{{i}} border" class="Magic"></app-content-card>
 </div>
 
 <div *ngFor="let content of (content | filter); index as i; first as isFirst; odd as odd; even as even;" >
-    <app-content-card  *ngIf="content.type=='Manga'" [content]="content" class="chess-player-{{i}} border" class="Action"></app-content-card>
+    <app-content-card  *ngIf="content.type=='Action'" [content]="content" class="chess-player-{{i}} border" class="Action"></app-content-card>
 </div>
 
 <div *ngFor="let content of (content | filter); index as i; first as isFirst; odd as odd; even as even;" >

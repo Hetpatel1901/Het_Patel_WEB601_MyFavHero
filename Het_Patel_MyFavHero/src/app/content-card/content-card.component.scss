@@ -19,6 +19,18 @@
         &.is-odd{
              background-color: rgb(211, 154, 84);
          } 
+         &.Action{
+            background-color: #3ba5f5;
+            color: blue;
+        }
+        &.Magic{
+            background-color: #8effa7;
+            color: red;
+        }
+        &.Superhero{
+            background-color: #3ba5f5;
+            color: blue;
+        }
     
      img{
         width: 25em;

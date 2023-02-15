@@ -6,9 +6,9 @@
     <img *ngIf="content && content.imgURL else elseBlock" [src]="content.imgURL" (click)="pritnItem()">
     <p class="body" *ngIf="content && content.description; else elseBlockNameIsWhateverYouWant">{{content.description}}</p>
 
-    <div class="type"  *ngIf="content && content.type else elseBlockNameIsWhateverYouWant" appHoverAffect>{{content.type}}</div>
+    <div class="type"  *ngIf="content && content.type else elseBlockNameIsWhateverYouWant" appHoverAffect [highlightColor]="'underline black 5px'">{{content.type}}</div>
     <div class="author"  *ngIf="content && content.creator else elseBlockNameIsWhateverYouWant">{{content.creator}}</div>
-    <div class="tags"  *ngIf="content && content.tags else elseBlockNameIsWhateverYouWant">{{content.tags}}</div>
+    <div class="tags"  *ngIf="content && content.tags else elseBlockNameIsWhateverYouWant" appHoverAffect [highlighttext]="'bold'">{{content.tags}}</div>
 
     <ng-template #elseBlock>
         <img [src]="'../assets/images/ironman.jpg'" alt="">
