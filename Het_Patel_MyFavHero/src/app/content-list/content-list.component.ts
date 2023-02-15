@@ -20,7 +20,7 @@ export class ContentListComponent implements OnInit {
     description: 'Iron Man is a 2008 American superhero film based on the Marvel Comics character of the same name. Produced by Marvel Studios and distributed by Paramount Pictures, it is the first film in the Marvel Cinematic Universe (MCU).',
     creator: 'Stan lee',
     type: 'Superhero',
-    imgURL: 'https://playcontestofchampions.com/wp-content/uploads/2021/11/champion-iron-man-infinity-war.jpg',
+    //imgURL: 'https://playcontestofchampions.com/wp-content/uploads/2021/11/champion-iron-man-infinity-war.jpg',
     tags: ['Action', 'Adventure', 'Comedy']
   },
   {

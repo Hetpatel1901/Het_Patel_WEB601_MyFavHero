@@ -3,14 +3,19 @@
         {{ content.title }}
     </h2>
     <!-- <img *ngIf="contentItem" src="{{contentItem.imageUrl}}"> -->
-    <img *ngIf="content && content.imgURL else elseBlockNameIsWhateverYouWant" [src]="content.imgURL" (click)="pritnItem()">
+    <img *ngIf="content && content.imgURL else elseBlock" [src]="content.imgURL" (click)="pritnItem()">
     <p class="body" *ngIf="content && content.description; else elseBlockNameIsWhateverYouWant">{{content.description}}</p>
 
     <div class="type"  *ngIf="content && content.type else elseBlockNameIsWhateverYouWant">{{content.type}}</div>
     <div class="author"  *ngIf="content && content.creator else elseBlockNameIsWhateverYouWant">{{content.creator}}</div>
     <div class="tags"  *ngIf="content && content.tags else elseBlockNameIsWhateverYouWant">{{content.tags}}</div>
 
+    <ng-template #elseBlock>
+        <img [src]="'../assets/images/ironman.jpg'" alt="">
+        </ng-template>
+
     <ng-template #elseBlockNameIsWhateverYouWant>
         <p class="not-found" hidden></p>
+        <p hidden></p>
     </ng-template>
 </div>  

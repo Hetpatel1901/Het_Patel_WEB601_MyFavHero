@@ -10,8 +10,9 @@ export class FilterPipe implements PipeTransform {
     if(!content){
       return content;
     }
-    return content.filter((item: Content) => {
-    return item.type?.length || item.type == 'Action' || item.type == 'Superhero';
+    return content.filter((content) => {
+      //return item.type?.length;
+      return content.type;
   });
  }
 }
