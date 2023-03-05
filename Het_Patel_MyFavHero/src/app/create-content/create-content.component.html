@@ -1,0 +1,19 @@
+<div>
+    <label for="id">ID:</label>
+    <input id="id" ngModel="newContent.id" name="id" type="number">
+  </div>
+  <div>
+    <label for="title">Title:</label>
+    <input id="title" ngModel="newContent.title" name="title" type="text" required>
+  </div>
+  <div>
+    <label for="description">Description:</label>
+    <input id="description" ngModel="newContent.description" name="description" type="text" required>
+  </div>
+  <div>
+    <label for="creator">Creator:</label>
+    <input id="creator" ngModel="newContent.creator" name="creator" type="text" required>
+  </div>
+  <button (click)="onSubmit()">Submit</button>
+  
+  <div *ngIf="errorMessage" style="color: red; font-weight: bold;">{{ errorMessage }}</div>

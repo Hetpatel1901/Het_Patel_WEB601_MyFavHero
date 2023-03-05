@@ -6,4 +6,5 @@ export interface Content {
     type?: string;
     tags?: string [];
     creator: string;
+    [key: string]: any;
 }

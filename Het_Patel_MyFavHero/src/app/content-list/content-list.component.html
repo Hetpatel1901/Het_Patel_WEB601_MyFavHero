@@ -1,7 +1,23 @@
+<div *ngFor="let content of filteredContents">
+    <h2>{{ content.title }}</h2>
+    <p>{{ content.description }}</p>
+    <p>Created by {{ content.creator }}</p>
+    <hr>
+  </div>
+  <app-create-content (contentCreated)="onContentCreated($event)"></app-create-content>
+<br>
+<br>
+
 <input ngModel for="inputvalue?" id="aut"/>
 <button (click)="clickEvent()">Click me!</button>
 <div class="aut" id="msg"></div>
 
+<br>
+<br>
+<div>
+    <label for="filter">Filter:</label>
+    <input id="filter" ngModel="filterText" name="filter" type="text">
+  </div>
 <!-- <div>
     <app-content-card *ngFor="let content of content; index as i; first as idFirst; odd as odd; even as even;" [content]="content" class="chess-player-{{i}} border" [class.is-odd]="odd" [class.is-even]="even"></app-content-card>
 </div> -->
