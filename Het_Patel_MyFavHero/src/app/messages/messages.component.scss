@@ -1,0 +1,23 @@
+.messages-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 1;
+    width: 100%;
+    height: auto;
+    padding: 13px;
+    background-color: #333;
+    color: #fff;
+    z-index: 999;
+  }
+  
+  .messages-container p {
+    margin: 10px;
+  }
+  
+  .close-button {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+  }
