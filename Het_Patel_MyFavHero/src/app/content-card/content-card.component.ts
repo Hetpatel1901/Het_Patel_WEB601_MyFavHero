@@ -32,6 +32,7 @@ export class ContentCardComponent implements OnInit {
     console.log(this.content?.creator);
   }
 
+  
 
   ngOnInit(): void {
   }

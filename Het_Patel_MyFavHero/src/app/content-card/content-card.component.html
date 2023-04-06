@@ -1,8 +1,7 @@
-<div class="border">
+<!-- <div class="border">
     <h2 *ngIf="content && content.title else elseBlockNameIsWhateverYouWant" appHoverAffect>
         {{ content.title }}
     </h2>
-    <!-- <img *ngIf="contentItem" src="{{contentItem.imageUrl}}"> -->
     <img *ngIf="content && content.imgURL else elseBlock" [src]="content.imgURL" (click)="pritnItem()">
     <p class="body" *ngIf="content && content.description; else elseBlockNameIsWhateverYouWant">{{content.description}}</p>
 
@@ -18,4 +17,21 @@
         <p class="not-found" hidden></p>
         <p hidden></p>
     </ng-template>
-</div>  
+</div>   -->
+
+<div class="border">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{content.title}}</mat-card-title>
+      <mat-card-subtitle>{{content.type}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="content.imgURL" alt="{{content.title}}">
+    <mat-card-content>
+      {{content.description}}
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button color="primary" (click)="editContent()">Edit</button>
+      <button mat-button color="warn" (click)="deleteContent()">Delete</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
