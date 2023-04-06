@@ -10,4 +10,4 @@
     <label for="description">Description:</label>
     <textarea id="description" [(ngModel)]="description"></textarea>
   </div>
-  <!-- <button (click)="addContent()">Add Content</button> -->
+  <button (click)="onSubmit()">{{ editing ? 'Update' : 'Add' }} Content</button>
