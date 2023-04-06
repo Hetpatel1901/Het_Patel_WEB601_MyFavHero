@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
     <label for="id">ID:</label>
     <mat-form-field type="number" id="id" [(ngModel)]="id" matInput>
   </div>
@@ -12,4 +12,9 @@
   </div>
   <button (click)="onSubmit()" mat-button>{{ editing ? 'Update' : 'Add' }} Content</button>
 
-  <button mat-raised-button (click)="openDialog()">Add New Content</button>
+  <button mat-raised-button (click)="openDialog()">Add New Content</button> -->
+
+   <div mat-dialog-actions>
+    <button mat-button (click)="onCancelClick()">Cancel</button>
+    <button mat-raised-button (click)="onAddClick()" color="primary">Add</button>
+  </div>

@@ -1,1 +1,25 @@
-<p>add-content-dialog works!</p>
+<h2 mat-dialog-title>{{ dialogTitle }}</h2>
+
+<div mat-dialog-content>
+    <mat-form-field>
+      <input matInput placeholder="Title" [(ngModel)]="data.title" name="title">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Description" [(ngModel)]="data.description" name="description">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Creator" [(ngModel)]="data.creator" name="creator">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Image URL" [(ngModel)]="data.imgURL" name="imgURL">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Type" [(ngModel)]="data.type" name="type">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Tags" [(ngModel)]="data.tags" name="tags">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="ID" [(ngModel)]="data.id" name="id" disabled>
+    </mat-form-field>
+  </div>
