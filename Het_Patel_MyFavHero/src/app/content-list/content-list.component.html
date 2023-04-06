@@ -10,8 +10,8 @@
 <br>
 <form #contentForm="ngForm" class="content-form">
     <label for="contentId">Enter content ID:</label>
-    <input type="number" id="contentId" name="contentId" required [(ngModel)]="contentId">
-    <button type="button" (click)="getContent()">Get Content</button>
+    <mat-form-field type="number" id="contentId" name="contentId" required [(ngModel)]="contentId" matInput>
+    <button type="button" (click)="getContent()" mat-button>Get Content</button>
   </form>
 <app-messages></app-messages>
 
@@ -19,13 +19,6 @@
     <app-content-card [content]="content[2]" class="card shadow-card" ></app-content-card>
 </div>
 
-<ul>
-    <li *ngFor="let content of (content | filter)">
-        <h1>{{content.id}}</h1>
-      <h3>{{content.title}}</h3>
-      <p>{{content.description}}</p>
-    </li>
-  </ul>
 
 <div *ngFor="let content of (content | filter); index as i; first as isFirst; odd as odd; even as even;" >
     <app-content-card  *ngIf="content.type=='Superhero'" [content]="content" class="chess-player-{{i}} border" class="Superhero"></app-content-card> 

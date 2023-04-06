@@ -2,6 +2,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 import { HeroService } from '../hero.service';
 import { MessageService } from '../message.service';
+import { MatDialog } from '@angular/material/dialog';
+import { AddContentDialogComponent } from '../add-content-dialog/add-content-dialog.component';
 
 @Component({
   selector: 'app-modify-content',
@@ -17,7 +19,19 @@ export class ModifyContentComponent {
 
   @Output() contentAdded = new EventEmitter<Content>();
 
-  constructor(private contentService: HeroService, private messageService: MessageService) { }
+  constructor(private contentService: HeroService, private messageService: MessageService, private dialog: MatDialog) { }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(AddContentDialogComponent, {
+      width: '400px',
+      data: {}
+    });
+  
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      console.log(result);
+    });
+  }
 
   addContent(newContent: Content) {
     this.contentService.addContent(newContent)

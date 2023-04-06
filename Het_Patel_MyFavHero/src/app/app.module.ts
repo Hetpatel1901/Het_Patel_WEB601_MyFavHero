@@ -15,6 +15,7 @@ import { HttpClientInMemoryWebApiModule, InMemoryWebApiModule } from 'angular-in
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { AddContentDialogComponent } from './add-content-dialog/add-content-dialog.component';
 
 
 @NgModule({
@@ -25,14 +26,18 @@ import { MatInputModule } from '@angular/material/input';
     FilterPipe,
     HoverAffectDirective,
     MessagesComponent,
-    ModifyContentComponent
+    ModifyContentComponent,
+    AddContentDialogComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatInputModule
+
   ],
   providers: [HeroService],
   bootstrap: [AppComponent]
