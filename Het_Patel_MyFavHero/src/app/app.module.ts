@@ -12,6 +12,7 @@ import { InMemoryDataService } from './services/in-memory-data.service';
 import { HeroService } from './hero.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule, InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HttpClientInMemoryWebApiModule, InMemoryWebApiModule } from 'angular-in
     BrowserModule,
     HttpClientModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [HeroService],
   bootstrap: [AppComponent]
