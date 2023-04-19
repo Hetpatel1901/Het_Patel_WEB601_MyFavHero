@@ -1,1 +1,14 @@
-<p>content-detail works!</p>
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>{{ content.title }}</mat-card-title>
+      <mat-card-subtitle>Author: {{ content.author }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{ content.imageUrl }}" alt="{{ content.title }}">
+    <mat-card-content>
+      <p>{{ content.description }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-button routerLink="/list">Back to List</a>
+    </mat-card-actions>
+  </mat-card>
+  
