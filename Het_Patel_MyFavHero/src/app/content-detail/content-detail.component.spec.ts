@@ -7,9 +7,7 @@ const routes: Routes = [
   { path: 'list', component: ContentListComponent },
   {
     path: 'content/:id',
-    loadChildren: () => import(' ').then(m => m.ContentDetailModule)
   },
-  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
