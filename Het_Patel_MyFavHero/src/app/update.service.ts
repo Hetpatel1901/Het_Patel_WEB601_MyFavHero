@@ -10,7 +10,17 @@ export class UpdateService {
       swUpdate.available.subscribe(() => {
         // Show the snackbar here
       });
+  
+      this.checkForUpdates();
     }
+  }
+  
+  private checkForUpdates() {
+    setInterval(() => {
+      this.swUpdate.checkForUpdate().then(() => {
+        console.log('Checked for updates');
+      });
+    }, 1800000); // 1800000 ms = 30 minutes
   }
 
   activateUpdate() {
