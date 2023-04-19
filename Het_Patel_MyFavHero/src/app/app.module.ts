@@ -17,6 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { AddContentDialogComponent } from './add-content-dialog/add-content-dialog.component';
 import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { ContentDetailComponent } from './content-detail/content-detail.componen
     FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    AppRoutingModule
 
   ],
   providers: [HeroService],
