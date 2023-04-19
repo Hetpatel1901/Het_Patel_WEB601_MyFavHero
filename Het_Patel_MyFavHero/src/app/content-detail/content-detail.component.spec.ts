@@ -1,23 +1,19 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { ContentListComponent } from '../content-list/content-list.component';
 
-import { ContentDetailComponent } from './content-detail.component';
+const routes: Routes = [
+  { path: '', redirectTo: '/list', pathMatch: 'full' },
+  { path: 'list', component: ContentListComponent },
+  {
+    path: 'content/:id',
+    loadChildren: () => import(' ').then(m => m.ContentDetailModule)
+  },
+  { path: '**', component: PageNotFoundComponent }
+];
 
-describe('ContentDetailComponent', () => {
-  let component: ContentDetailComponent;
-  let fixture: ComponentFixture<ContentDetailComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ ContentDetailComponent ]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(ContentDetailComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}
