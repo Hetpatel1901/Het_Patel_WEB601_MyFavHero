@@ -34,4 +34,14 @@
       <button mat-button color="warn" (click)="deleteContent()">Delete</button>
     </mat-card-actions>
   </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{ content.title }}</mat-card-title>
+      <mat-card-subtitle>Author: {{ content.author }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{ content.imageUrl }}" alt="{{ content.title }}">
+    <mat-card-actions>
+      <a mat-button [routerLink]="['/detail', content.id]">View Details</a>
+    </mat-card-actions>
+  </mat-card>  
 </div>
